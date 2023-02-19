@@ -1,6 +1,6 @@
 # Laboratory work 1
 
-_Comands to test:_  
+_Commands to test:_  
 * From `root` folder
 * `bash statistics.sh`
 * `bash measure_time.sh statistics.sh`
