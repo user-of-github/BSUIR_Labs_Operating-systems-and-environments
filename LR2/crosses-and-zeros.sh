@@ -1,7 +1,7 @@
 # !/bin/bash
 
 # data
-field=("$var" "\ " "\ " "\ " "\ " "\ " "\ " "\ " "\ ") # 9 = 3x3 empty cells
+field=("\ " "\ " "\ " "\ " "\ " "\ " "\ " "\ " "\ ") # 9 = 3x3 empty cells
 game_in_process=true
 cross="x"
 zero="o"
@@ -78,27 +78,28 @@ make_turn() {
     	echo -n Time for $zero turn " "
   	fi
   	
-  	read chosen_cell
-  	
-  	if [[ ! $chosen_cell =~ ^[0-9]$ ]]; then 
-  		echo Not valid cell number, need to insert 0..9
-  		make_turn
-  	fi
+  	while true
+  	do
+  		read chosen_cell
+  		
+  		if [[ ! $chosen_cell =~ ^[0-9]$ ]]; then 
+  			echo Not valid cell number, need to insert 0..9
+  		elif [[ ${field[$chosen_cell]} = "$cross" ]] || [[ ${field[$chosen_cell]} = "$zero" ]]; then 
+  			echo Cell ocupied, repeat trial
+ 		else
+ 			break
+  		fi  		
+  	done
+	
+	echo inputed cell was ${field[$chosen_cell]}
+	
 
-  	if [[ ${field[$chosen_cell]} =~ ^[$cross]$ ]] || [[ ${field[$chosen_cell]} =~ ^[$zero]$ ]]; then 
-  		echo Cell ocupied, repeat trial
-  		make_turn
-  	fi
-  	
   	((turns_count=turns_count+1))
   	
   	field[$chosen_cell]=$current_turn
   	
-  	if [[ $current_turn == $cross ]]; then
-    	current_turn=$zero
-  	else
-    	current_turn=$cross
-  	fi
+  	
+  	chosen_cell=-1
 }
 
 
@@ -108,4 +109,10 @@ while $game_in_process
 		check_all_variants
 		print_field
 		determine_winner_if_game_is_over
+		
+		if [[ $current_turn == $cross ]]; then
+    		current_turn=$zero
+  		else
+    		current_turn=$cross
+  		fi
 	done
