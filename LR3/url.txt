@@ -8,8 +8,6 @@ https:///www.not-correct.com
 https://url-with-digit2.com
 correcturl.com/
 http:///www.notcorrecturl.com
-www.url.com/with/path
-www.url.com/with/path/
 www.url.com/with/path/file.html
 www.url.com/with/path/file.html.
 http://www.aaa.

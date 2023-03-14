@@ -7,6 +7,7 @@ regular_expression='^(https?:\/\/)?'\
 '[a-zA-Z][a-zA-Z0-9]{2,}((-|_|.)[a-zA-Z0-9]+)*'\
 '(\.[a-zA-Z]{2,11})'\
 ')'\
+'(\/)?'\
 '(\/([a-zA-Z0-9]+(\/[a-zA-Z0-9]+)*\/?)?\.[a-zA-Z0-9]{1,10})?$'
 
 # protocol [optinal]

@@ -1,1 +1,0 @@
-INSERT INTO marvel_movies(id,title,box_office) VALUES (1,'Ant-Man-3',500000000), (2,'Guardians-of-the-galaxy-3',1000000000), (3,'Shazam-2',500000000)
