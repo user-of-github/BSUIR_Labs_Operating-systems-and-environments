@@ -1,15 +1,18 @@
 name: Run tests
 on: [push]
 
+        	  
 jobs:
-	run:
-		runs-on: ubuntu-latest
-		steps:
-			- name: checkout repo
-			  uses: actions/checkout@v2
-			- name: build application
-        	  run: |
-        	  cd LR4
-        	  cd replace_words
-        	  make test
-        	  make clean
+  build:
+    runs-on: ubuntu-latest
+    name: Run Tests 
+    
+    steps:
+      - uses: actions/checkout@v3
+     
+      - name: Build and push
+        run: |
+          cd LR4
+          cd replace_words
+          make test
+          make clean
