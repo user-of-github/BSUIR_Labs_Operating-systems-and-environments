@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
      
-      - name: Build and push
+      - name: Run test for words_replacer task
         run: |
           cd LR4
           cd replace_words

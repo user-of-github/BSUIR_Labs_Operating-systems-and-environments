@@ -1,7 +1,6 @@
 #include <cassert>
 #include <string>
-#include "./data_reader.hpp"
-#include "./convert_text.hpp"
+#include "./convert_text/convert_text.hpp"
 
 
 int main()

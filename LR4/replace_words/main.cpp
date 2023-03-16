@@ -1,6 +1,6 @@
 #include <iostream>
-#include "./data_reader.hpp"
-#include "./convert_text.hpp"
+#include "./data_reader/data_reader.hpp"
+#include "./convert_text/convert_text.hpp"
 
 
 int main()
