@@ -1,26 +1,31 @@
 #include <cassert>
 #include <string>
-#include <array>
 #include "./data_reader.hpp"
 #include "./convert_text.hpp"
 
 
 int main()
 {
-	const std::vector<std::string> vocabulary_source {"test1", "test2",  "BBB", "CCC"};
-	const std::unordered_set<std::string> vocabulary (std::cbegin(vocabulary_source), std::cend(vocabulary_source));
+	using TestItem = std::pair<std::string, std::string>;
 
-	const std::string kStringToChange {"A"};
+	const std::vector<std::string> vocabulary_source{"test1", "test2", "bbb", "ccc"};
+	const std::unordered_set<std::string> vocabulary(std::cbegin(vocabulary_source), std::cend(vocabulary_source));
 
-	const std::array<std::pair<std::string, std::string>, 2> test_items{
-		std::make_pair<std::string, std::string>("test1 test test2", "A test A"),
-		std::make_pair<std::string, std::string>("BBB CCC BC A", "A A BC A")
+	const std::string kStringToChange{"A"};
+
+	const TestItem test_items[] {
+		{"test1 test test2", "A test A"},
+		{"BBB CCC BC A", "A A BC A"},
+		{"TEST2 test2 test1", "A A A"},
+		{"BBB CCC BC A", "A A BC A"},
 	};
 
 	for (const auto &[source, result] : test_items) {
-		const auto transformed {replace_words(source, vocabulary, kStringToChange)};
-		std::cout << source << '|' << transformed << '|' << result << '\n';
+		const auto transformed{replace_words(source, vocabulary, kStringToChange)};
 		assert(transformed == result);
 	}
+
+	std::clog << "Assertation passed\n";
+
 	return 0;
 }

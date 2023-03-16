@@ -1,0 +1,17 @@
+ name: Run tests
+   on:
+     push:
+       branches: [ master ]
+
+   jobs:
+    build:
+      runs-on: ubuntu-latest
+      steps:
+      - name: checkout repo
+        uses: actions/checkout@v2
+      - name: build application
+        run: |
+        	cd LR4
+        	cd replace_words
+        	make test
+        	make clean

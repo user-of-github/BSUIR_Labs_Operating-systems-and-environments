@@ -9,4 +9,4 @@ out/
 /cmake-build-debug
 cmake-build-debug
 text_converter
-test
+test_app
