@@ -7,6 +7,7 @@
 #include <iostream>
 #include <sstream>
 
+
 const std::vector<std::string> get_source_dictionary(const std::string &);
 
 const std::string get_source_text(const std::string &);

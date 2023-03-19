@@ -3,9 +3,9 @@
 
 const std::vector<std::string> get_source_dictionary(const std::string &file_name)
 {
-	std::ifstream read {file_name};
-	std::vector<std::string> response {};
-	std::string temp {};
+	std::ifstream read{file_name};
+	std::vector<std::string> response{};
+	std::string temp{};
 
 	while (read >> temp) {
 		response.push_back(temp);
@@ -16,7 +16,8 @@ const std::vector<std::string> get_source_dictionary(const std::string &file_nam
 	return response;
 }
 
-const std::string get_source_text(const std::string &file_name) {
+const std::string get_source_text(const std::string &file_name)
+{
 	std::ifstream read{file_name};
 
 	if (read.is_open()) {

@@ -9,7 +9,7 @@
 int main()
 {
 	const std::vector<std::string> dictionary_source{"test", "word", "example", "text"};
-	const DictionaryType dictionary {create_full_dictionary(dictionary_source)};
+	const DictionaryType dictionary{create_full_dictionary(dictionary_source)};
 
 	const std::pair<std::string, std::string> source_texts[]{
 		{"Tesd text with wort", "test text with word"},
@@ -18,7 +18,7 @@ int main()
 	};
 
 	for (const auto &[source, result] : source_texts) {
-		const std::string corrected_text {get_corrected_text(source, dictionary)};
+		const std::string corrected_text{get_corrected_text(source, dictionary)};
 		assert(corrected_text == result);
 		//std::cout << corrected_text << ' ' << result << '\n';
 	}

@@ -8,7 +8,8 @@
 #include <iostream>
 #include "../utils/utils.hpp"
 
-const char kAnySymbol {'*'};
+
+const char kAnySymbol{'*'};
 
 using DictionaryType = std::unordered_map<std::string, std::string>;
 
