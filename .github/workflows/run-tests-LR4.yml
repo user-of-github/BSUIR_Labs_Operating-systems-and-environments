@@ -1,5 +1,7 @@
 name: LR4 - tests
-on: [push]
+on:
+  push:
+    branches:  [LR4]
 
 jobs:
   test_words_replacer_app:
