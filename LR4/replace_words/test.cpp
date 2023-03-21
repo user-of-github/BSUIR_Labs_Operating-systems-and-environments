@@ -1,6 +1,6 @@
 #include <cassert>
 #include <string>
-#include "./convert_text/convert_text.hpp"
+#include "./lib/convert_text/convert_text.hpp"
 
 
 int main()
