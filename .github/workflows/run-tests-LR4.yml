@@ -1,8 +1,5 @@
 name: LR4 - tests
-on:
-  push:
-    paths:
-      - LR4/**
+on: [push]
 
 jobs:
   test_words_replacer_app:
