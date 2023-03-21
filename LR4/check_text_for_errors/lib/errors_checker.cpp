@@ -1,4 +1,4 @@
-#include "./errors_checker.hpp"
+#include "include/errors_checker.hpp"
 
 
 const DictionaryType create_full_dictionary(const std::vector<std::string> &source)

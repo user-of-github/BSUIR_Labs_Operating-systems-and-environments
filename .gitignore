@@ -12,3 +12,6 @@ text_converter
 test_app
 test_program
 text_error_checker
+*.o
+*.exe
+*.a

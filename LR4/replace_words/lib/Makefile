@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/user/Documents/HomeWork/Operating Systems and Environments/LR4/replace_words"
+CMAKE_SOURCE_DIR = "/home/user/Documents/HomeWork/Operating Systems and Environments/LR4/replace_words/lib"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/user/Documents/HomeWork/Operating Systems and Environments/LR4/replace_words"
+CMAKE_BINARY_DIR = "/home/user/Documents/HomeWork/Operating Systems and Environments/LR4/replace_words/lib"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/user/Documents/HomeWork/Operating Systems and Environments/LR4/replace_words/CMakeFiles" "/home/user/Documents/HomeWork/Operating Systems and Environments/LR4/replace_words/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/user/Documents/HomeWork/Operating Systems and Environments/LR4/replace_words/lib/CMakeFiles" "/home/user/Documents/HomeWork/Operating Systems and Environments/LR4/replace_words/lib/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/user/Documents/HomeWork/Operating Systems and Environments/LR4/replace_words/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/user/Documents/HomeWork/Operating Systems and Environments/LR4/replace_words/lib/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named replace_words
+# Target rules for targets named StaticLib
 
 # Build rule for target.
-replace_words: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 replace_words
-.PHONY : replace_words
+StaticLib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 StaticLib
+.PHONY : StaticLib
 
 # fast build rule for target.
-replace_words/fast:
-	$(MAKE) -f CMakeFiles/replace_words.dir/build.make CMakeFiles/replace_words.dir/build
-.PHONY : replace_words/fast
+StaticLib/fast:
+	$(MAKE) -f CMakeFiles/StaticLib.dir/build.make CMakeFiles/StaticLib.dir/build
+.PHONY : StaticLib/fast
 
 convert_text/convert_text.o: convert_text/convert_text.cpp.o
 
@@ -129,7 +129,7 @@ convert_text/convert_text.o: convert_text/convert_text.cpp.o
 
 # target to build an object file
 convert_text/convert_text.cpp.o:
-	$(MAKE) -f CMakeFiles/replace_words.dir/build.make CMakeFiles/replace_words.dir/convert_text/convert_text.cpp.o
+	$(MAKE) -f CMakeFiles/StaticLib.dir/build.make CMakeFiles/StaticLib.dir/convert_text/convert_text.cpp.o
 .PHONY : convert_text/convert_text.cpp.o
 
 convert_text/convert_text.i: convert_text/convert_text.cpp.i
@@ -138,7 +138,7 @@ convert_text/convert_text.i: convert_text/convert_text.cpp.i
 
 # target to preprocess a source file
 convert_text/convert_text.cpp.i:
-	$(MAKE) -f CMakeFiles/replace_words.dir/build.make CMakeFiles/replace_words.dir/convert_text/convert_text.cpp.i
+	$(MAKE) -f CMakeFiles/StaticLib.dir/build.make CMakeFiles/StaticLib.dir/convert_text/convert_text.cpp.i
 .PHONY : convert_text/convert_text.cpp.i
 
 convert_text/convert_text.s: convert_text/convert_text.cpp.s
@@ -147,7 +147,7 @@ convert_text/convert_text.s: convert_text/convert_text.cpp.s
 
 # target to generate assembly for a file
 convert_text/convert_text.cpp.s:
-	$(MAKE) -f CMakeFiles/replace_words.dir/build.make CMakeFiles/replace_words.dir/convert_text/convert_text.cpp.s
+	$(MAKE) -f CMakeFiles/StaticLib.dir/build.make CMakeFiles/StaticLib.dir/convert_text/convert_text.cpp.s
 .PHONY : convert_text/convert_text.cpp.s
 
 data_reader/data_reader.o: data_reader/data_reader.cpp.o
@@ -156,7 +156,7 @@ data_reader/data_reader.o: data_reader/data_reader.cpp.o
 
 # target to build an object file
 data_reader/data_reader.cpp.o:
-	$(MAKE) -f CMakeFiles/replace_words.dir/build.make CMakeFiles/replace_words.dir/data_reader/data_reader.cpp.o
+	$(MAKE) -f CMakeFiles/StaticLib.dir/build.make CMakeFiles/StaticLib.dir/data_reader/data_reader.cpp.o
 .PHONY : data_reader/data_reader.cpp.o
 
 data_reader/data_reader.i: data_reader/data_reader.cpp.i
@@ -165,7 +165,7 @@ data_reader/data_reader.i: data_reader/data_reader.cpp.i
 
 # target to preprocess a source file
 data_reader/data_reader.cpp.i:
-	$(MAKE) -f CMakeFiles/replace_words.dir/build.make CMakeFiles/replace_words.dir/data_reader/data_reader.cpp.i
+	$(MAKE) -f CMakeFiles/StaticLib.dir/build.make CMakeFiles/StaticLib.dir/data_reader/data_reader.cpp.i
 .PHONY : data_reader/data_reader.cpp.i
 
 data_reader/data_reader.s: data_reader/data_reader.cpp.s
@@ -174,35 +174,8 @@ data_reader/data_reader.s: data_reader/data_reader.cpp.s
 
 # target to generate assembly for a file
 data_reader/data_reader.cpp.s:
-	$(MAKE) -f CMakeFiles/replace_words.dir/build.make CMakeFiles/replace_words.dir/data_reader/data_reader.cpp.s
+	$(MAKE) -f CMakeFiles/StaticLib.dir/build.make CMakeFiles/StaticLib.dir/data_reader/data_reader.cpp.s
 .PHONY : data_reader/data_reader.cpp.s
-
-main.o: main.cpp.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/replace_words.dir/build.make CMakeFiles/replace_words.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/replace_words.dir/build.make CMakeFiles/replace_words.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/replace_words.dir/build.make CMakeFiles/replace_words.dir/main.cpp.s
-.PHONY : main.cpp.s
 
 utils/utils.o: utils/utils.cpp.o
 
@@ -210,7 +183,7 @@ utils/utils.o: utils/utils.cpp.o
 
 # target to build an object file
 utils/utils.cpp.o:
-	$(MAKE) -f CMakeFiles/replace_words.dir/build.make CMakeFiles/replace_words.dir/utils/utils.cpp.o
+	$(MAKE) -f CMakeFiles/StaticLib.dir/build.make CMakeFiles/StaticLib.dir/utils/utils.cpp.o
 .PHONY : utils/utils.cpp.o
 
 utils/utils.i: utils/utils.cpp.i
@@ -219,7 +192,7 @@ utils/utils.i: utils/utils.cpp.i
 
 # target to preprocess a source file
 utils/utils.cpp.i:
-	$(MAKE) -f CMakeFiles/replace_words.dir/build.make CMakeFiles/replace_words.dir/utils/utils.cpp.i
+	$(MAKE) -f CMakeFiles/StaticLib.dir/build.make CMakeFiles/StaticLib.dir/utils/utils.cpp.i
 .PHONY : utils/utils.cpp.i
 
 utils/utils.s: utils/utils.cpp.s
@@ -228,7 +201,7 @@ utils/utils.s: utils/utils.cpp.s
 
 # target to generate assembly for a file
 utils/utils.cpp.s:
-	$(MAKE) -f CMakeFiles/replace_words.dir/build.make CMakeFiles/replace_words.dir/utils/utils.cpp.s
+	$(MAKE) -f CMakeFiles/StaticLib.dir/build.make CMakeFiles/StaticLib.dir/utils/utils.cpp.s
 .PHONY : utils/utils.cpp.s
 
 # Help Target
@@ -239,16 +212,13 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... replace_words"
+	@echo "... StaticLib"
 	@echo "... convert_text/convert_text.o"
 	@echo "... convert_text/convert_text.i"
 	@echo "... convert_text/convert_text.s"
 	@echo "... data_reader/data_reader.o"
 	@echo "... data_reader/data_reader.i"
 	@echo "... data_reader/data_reader.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 	@echo "... utils/utils.o"
 	@echo "... utils/utils.i"
 	@echo "... utils/utils.s"

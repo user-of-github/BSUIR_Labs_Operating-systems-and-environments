@@ -1,0 +1,2 @@
+/usr/bin/ar qc libStaticLib.a  CMakeFiles/StaticLib.dir/convert_text/convert_text.cpp.o CMakeFiles/StaticLib.dir/data_reader/data_reader.cpp.o CMakeFiles/StaticLib.dir/utils/utils.cpp.o
+/usr/bin/ranlib libStaticLib.a

@@ -3,7 +3,7 @@
 #include <vector>
 #include <string>
 #include <iostream>
-#include "./errors_checker/errors_checker.hpp"
+#include "lib/include/errors_checker.hpp"
 
 
 int main()

@@ -6,7 +6,7 @@
 #include <string>
 #include <sstream>
 #include <iostream>
-#include "../utils/utils.hpp"
+#include "utils.hpp"
 
 
 const char kAnySymbol{'*'};

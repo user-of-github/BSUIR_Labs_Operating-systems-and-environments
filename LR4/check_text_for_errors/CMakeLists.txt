@@ -3,4 +3,4 @@ project(check_text_for_errors)
 
 set(CMAKE_CXX_STANDARD 23)
 
-add_executable(check_text_for_errors main.cpp ./errors_checker/errors_checker.cpp ./errors_checker/errors_checker.hpp utils/utils.cpp utils/utils.hpp data_reader/data_reader.cpp data_reader/data_reader.hpp)
+add_executable(check_text_for_errors main.cpp lib/errors_checker.cpp lib/include/errors_checker.hpp lib/utils.cpp lib/include/utils.hpp lib/data_reader.cpp lib/include/data_reader.hpp)

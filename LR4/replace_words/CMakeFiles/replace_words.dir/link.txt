@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/replace_words.dir/main.cpp.o CMakeFiles/replace_words.dir/data_reader/data_reader.cpp.o CMakeFiles/replace_words.dir/utils/utils.cpp.o CMakeFiles/replace_words.dir/convert_text/convert_text.cpp.o  -o replace_words 
