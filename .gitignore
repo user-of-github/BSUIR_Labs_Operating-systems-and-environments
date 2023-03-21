@@ -14,4 +14,8 @@ test_program
 text_error_checker
 *.o
 *.exe
-*.a
+
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+.cmake/
