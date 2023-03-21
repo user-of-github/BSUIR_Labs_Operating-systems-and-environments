@@ -3,7 +3,7 @@
 #include <sstream>
 #include <iostream>
 #include <unordered_set>
-#include "../utils/utils.hpp"
+#include "utils.hpp"
 
 
 const std::string read_text_from_file(const std::string &);

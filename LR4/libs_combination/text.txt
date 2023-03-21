@@ -1,0 +1,3 @@
+This is text EXUMPLE with error in word univercity and labtop.
+Next row will contain only words from dictionary and with errors:
+Ferst seKond thirt Exumple

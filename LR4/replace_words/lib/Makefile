@@ -111,98 +111,98 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named StaticLib
+# Target rules for targets named replace_words_shared_library
 
 # Build rule for target.
-StaticLib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 StaticLib
-.PHONY : StaticLib
+replace_words_shared_library: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 replace_words_shared_library
+.PHONY : replace_words_shared_library
 
 # fast build rule for target.
-StaticLib/fast:
-	$(MAKE) -f CMakeFiles/StaticLib.dir/build.make CMakeFiles/StaticLib.dir/build
-.PHONY : StaticLib/fast
+replace_words_shared_library/fast:
+	$(MAKE) -f CMakeFiles/replace_words_shared_library.dir/build.make CMakeFiles/replace_words_shared_library.dir/build
+.PHONY : replace_words_shared_library/fast
 
-convert_text/convert_text.o: convert_text/convert_text.cpp.o
+src/convert_text.o: src/convert_text.cpp.o
 
-.PHONY : convert_text/convert_text.o
-
-# target to build an object file
-convert_text/convert_text.cpp.o:
-	$(MAKE) -f CMakeFiles/StaticLib.dir/build.make CMakeFiles/StaticLib.dir/convert_text/convert_text.cpp.o
-.PHONY : convert_text/convert_text.cpp.o
-
-convert_text/convert_text.i: convert_text/convert_text.cpp.i
-
-.PHONY : convert_text/convert_text.i
-
-# target to preprocess a source file
-convert_text/convert_text.cpp.i:
-	$(MAKE) -f CMakeFiles/StaticLib.dir/build.make CMakeFiles/StaticLib.dir/convert_text/convert_text.cpp.i
-.PHONY : convert_text/convert_text.cpp.i
-
-convert_text/convert_text.s: convert_text/convert_text.cpp.s
-
-.PHONY : convert_text/convert_text.s
-
-# target to generate assembly for a file
-convert_text/convert_text.cpp.s:
-	$(MAKE) -f CMakeFiles/StaticLib.dir/build.make CMakeFiles/StaticLib.dir/convert_text/convert_text.cpp.s
-.PHONY : convert_text/convert_text.cpp.s
-
-data_reader/data_reader.o: data_reader/data_reader.cpp.o
-
-.PHONY : data_reader/data_reader.o
+.PHONY : src/convert_text.o
 
 # target to build an object file
-data_reader/data_reader.cpp.o:
-	$(MAKE) -f CMakeFiles/StaticLib.dir/build.make CMakeFiles/StaticLib.dir/data_reader/data_reader.cpp.o
-.PHONY : data_reader/data_reader.cpp.o
+src/convert_text.cpp.o:
+	$(MAKE) -f CMakeFiles/replace_words_shared_library.dir/build.make CMakeFiles/replace_words_shared_library.dir/src/convert_text.cpp.o
+.PHONY : src/convert_text.cpp.o
 
-data_reader/data_reader.i: data_reader/data_reader.cpp.i
+src/convert_text.i: src/convert_text.cpp.i
 
-.PHONY : data_reader/data_reader.i
+.PHONY : src/convert_text.i
 
 # target to preprocess a source file
-data_reader/data_reader.cpp.i:
-	$(MAKE) -f CMakeFiles/StaticLib.dir/build.make CMakeFiles/StaticLib.dir/data_reader/data_reader.cpp.i
-.PHONY : data_reader/data_reader.cpp.i
+src/convert_text.cpp.i:
+	$(MAKE) -f CMakeFiles/replace_words_shared_library.dir/build.make CMakeFiles/replace_words_shared_library.dir/src/convert_text.cpp.i
+.PHONY : src/convert_text.cpp.i
 
-data_reader/data_reader.s: data_reader/data_reader.cpp.s
+src/convert_text.s: src/convert_text.cpp.s
 
-.PHONY : data_reader/data_reader.s
+.PHONY : src/convert_text.s
 
 # target to generate assembly for a file
-data_reader/data_reader.cpp.s:
-	$(MAKE) -f CMakeFiles/StaticLib.dir/build.make CMakeFiles/StaticLib.dir/data_reader/data_reader.cpp.s
-.PHONY : data_reader/data_reader.cpp.s
+src/convert_text.cpp.s:
+	$(MAKE) -f CMakeFiles/replace_words_shared_library.dir/build.make CMakeFiles/replace_words_shared_library.dir/src/convert_text.cpp.s
+.PHONY : src/convert_text.cpp.s
 
-utils/utils.o: utils/utils.cpp.o
+src/data_reader.o: src/data_reader.cpp.o
 
-.PHONY : utils/utils.o
+.PHONY : src/data_reader.o
 
 # target to build an object file
-utils/utils.cpp.o:
-	$(MAKE) -f CMakeFiles/StaticLib.dir/build.make CMakeFiles/StaticLib.dir/utils/utils.cpp.o
-.PHONY : utils/utils.cpp.o
+src/data_reader.cpp.o:
+	$(MAKE) -f CMakeFiles/replace_words_shared_library.dir/build.make CMakeFiles/replace_words_shared_library.dir/src/data_reader.cpp.o
+.PHONY : src/data_reader.cpp.o
 
-utils/utils.i: utils/utils.cpp.i
+src/data_reader.i: src/data_reader.cpp.i
 
-.PHONY : utils/utils.i
+.PHONY : src/data_reader.i
 
 # target to preprocess a source file
-utils/utils.cpp.i:
-	$(MAKE) -f CMakeFiles/StaticLib.dir/build.make CMakeFiles/StaticLib.dir/utils/utils.cpp.i
-.PHONY : utils/utils.cpp.i
+src/data_reader.cpp.i:
+	$(MAKE) -f CMakeFiles/replace_words_shared_library.dir/build.make CMakeFiles/replace_words_shared_library.dir/src/data_reader.cpp.i
+.PHONY : src/data_reader.cpp.i
 
-utils/utils.s: utils/utils.cpp.s
+src/data_reader.s: src/data_reader.cpp.s
 
-.PHONY : utils/utils.s
+.PHONY : src/data_reader.s
 
 # target to generate assembly for a file
-utils/utils.cpp.s:
-	$(MAKE) -f CMakeFiles/StaticLib.dir/build.make CMakeFiles/StaticLib.dir/utils/utils.cpp.s
-.PHONY : utils/utils.cpp.s
+src/data_reader.cpp.s:
+	$(MAKE) -f CMakeFiles/replace_words_shared_library.dir/build.make CMakeFiles/replace_words_shared_library.dir/src/data_reader.cpp.s
+.PHONY : src/data_reader.cpp.s
+
+src/utils.o: src/utils.cpp.o
+
+.PHONY : src/utils.o
+
+# target to build an object file
+src/utils.cpp.o:
+	$(MAKE) -f CMakeFiles/replace_words_shared_library.dir/build.make CMakeFiles/replace_words_shared_library.dir/src/utils.cpp.o
+.PHONY : src/utils.cpp.o
+
+src/utils.i: src/utils.cpp.i
+
+.PHONY : src/utils.i
+
+# target to preprocess a source file
+src/utils.cpp.i:
+	$(MAKE) -f CMakeFiles/replace_words_shared_library.dir/build.make CMakeFiles/replace_words_shared_library.dir/src/utils.cpp.i
+.PHONY : src/utils.cpp.i
+
+src/utils.s: src/utils.cpp.s
+
+.PHONY : src/utils.s
+
+# target to generate assembly for a file
+src/utils.cpp.s:
+	$(MAKE) -f CMakeFiles/replace_words_shared_library.dir/build.make CMakeFiles/replace_words_shared_library.dir/src/utils.cpp.s
+.PHONY : src/utils.cpp.s
 
 # Help Target
 help:
@@ -212,16 +212,16 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... StaticLib"
-	@echo "... convert_text/convert_text.o"
-	@echo "... convert_text/convert_text.i"
-	@echo "... convert_text/convert_text.s"
-	@echo "... data_reader/data_reader.o"
-	@echo "... data_reader/data_reader.i"
-	@echo "... data_reader/data_reader.s"
-	@echo "... utils/utils.o"
-	@echo "... utils/utils.i"
-	@echo "... utils/utils.s"
+	@echo "... replace_words_shared_library"
+	@echo "... src/convert_text.o"
+	@echo "... src/convert_text.i"
+	@echo "... src/convert_text.s"
+	@echo "... src/data_reader.o"
+	@echo "... src/data_reader.i"
+	@echo "... src/data_reader.s"
+	@echo "... src/utils.o"
+	@echo "... src/utils.i"
+	@echo "... src/utils.s"
 .PHONY : help
 
 

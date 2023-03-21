@@ -1,3 +1,0 @@
-/home/user/Documents/HomeWork/Operating Systems and Environments/LR4/replace_words/lib/CMakeFiles/rebuild_cache.dir
-/home/user/Documents/HomeWork/Operating Systems and Environments/LR4/replace_words/lib/CMakeFiles/edit_cache.dir
-/home/user/Documents/HomeWork/Operating Systems and Environments/LR4/replace_words/lib/CMakeFiles/StaticLib.dir

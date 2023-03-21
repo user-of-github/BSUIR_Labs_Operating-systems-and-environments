@@ -1,4 +1,4 @@
-#include "./data_reader.hpp"
+#include "../include/data_reader.hpp"
 
 
 const std::string read_text_from_file(const std::string &file_name)

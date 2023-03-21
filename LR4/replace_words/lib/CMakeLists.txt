@@ -1,6 +1,14 @@
-cmake_minimum_required(VERSION 3.16)
-project(StaticLib)
+CMAKE_MINIMUM_REQUIRED(VERSION 3.9)
 
-set(CMAKE_CXX_STANDARD 17)
+PROJECT (replace_words_shared_library)
+SET(CMAKE_BUILD_TYPE Release)
 
-ADD_LIBRARY( StaticLib STATIC ./convert_text/convert_text.cpp ./data_reader/data_reader.cpp ./utils/utils.cpp )
+INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/include)
+
+ADD_LIBRARY(
+        replace_words_shared_library
+        SHARED
+        src/convert_text.cpp
+        src/data_reader.cpp
+        src/utils.cpp
+)

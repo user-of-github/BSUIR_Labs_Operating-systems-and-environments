@@ -3,4 +3,4 @@ project(replace_words)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(replace_words main.cpp lib/data_reader/data_reader.cpp lib/data_reader/data_reader.hpp lib/utils/utils.hpp lib/utils/utils.cpp lib/convert_text/convert_text.cpp lib/convert_text/convert_text.hpp)
+add_executable(replace_words main.cpp lib/src/data_reader.cpp lib/include/data_reader.hpp lib/include/utils.hpp lib/src/utils.cpp lib/src/convert_text.cpp lib/include/convert_text.hpp)
