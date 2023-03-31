@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named replace_words_shared_library
+# Target rules for targets named replace_words_shared
 
 # Build rule for target.
-replace_words_shared_library: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 replace_words_shared_library
-.PHONY : replace_words_shared_library
+replace_words_shared: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 replace_words_shared
+.PHONY : replace_words_shared
 
 # fast build rule for target.
-replace_words_shared_library/fast:
-	$(MAKE) -f CMakeFiles/replace_words_shared_library.dir/build.make CMakeFiles/replace_words_shared_library.dir/build
-.PHONY : replace_words_shared_library/fast
+replace_words_shared/fast:
+	$(MAKE) -f CMakeFiles/replace_words_shared.dir/build.make CMakeFiles/replace_words_shared.dir/build
+.PHONY : replace_words_shared/fast
 
 src/convert_text.o: src/convert_text.cpp.o
 
@@ -129,7 +129,7 @@ src/convert_text.o: src/convert_text.cpp.o
 
 # target to build an object file
 src/convert_text.cpp.o:
-	$(MAKE) -f CMakeFiles/replace_words_shared_library.dir/build.make CMakeFiles/replace_words_shared_library.dir/src/convert_text.cpp.o
+	$(MAKE) -f CMakeFiles/replace_words_shared.dir/build.make CMakeFiles/replace_words_shared.dir/src/convert_text.cpp.o
 .PHONY : src/convert_text.cpp.o
 
 src/convert_text.i: src/convert_text.cpp.i
@@ -138,7 +138,7 @@ src/convert_text.i: src/convert_text.cpp.i
 
 # target to preprocess a source file
 src/convert_text.cpp.i:
-	$(MAKE) -f CMakeFiles/replace_words_shared_library.dir/build.make CMakeFiles/replace_words_shared_library.dir/src/convert_text.cpp.i
+	$(MAKE) -f CMakeFiles/replace_words_shared.dir/build.make CMakeFiles/replace_words_shared.dir/src/convert_text.cpp.i
 .PHONY : src/convert_text.cpp.i
 
 src/convert_text.s: src/convert_text.cpp.s
@@ -147,7 +147,7 @@ src/convert_text.s: src/convert_text.cpp.s
 
 # target to generate assembly for a file
 src/convert_text.cpp.s:
-	$(MAKE) -f CMakeFiles/replace_words_shared_library.dir/build.make CMakeFiles/replace_words_shared_library.dir/src/convert_text.cpp.s
+	$(MAKE) -f CMakeFiles/replace_words_shared.dir/build.make CMakeFiles/replace_words_shared.dir/src/convert_text.cpp.s
 .PHONY : src/convert_text.cpp.s
 
 src/data_reader.o: src/data_reader.cpp.o
@@ -156,7 +156,7 @@ src/data_reader.o: src/data_reader.cpp.o
 
 # target to build an object file
 src/data_reader.cpp.o:
-	$(MAKE) -f CMakeFiles/replace_words_shared_library.dir/build.make CMakeFiles/replace_words_shared_library.dir/src/data_reader.cpp.o
+	$(MAKE) -f CMakeFiles/replace_words_shared.dir/build.make CMakeFiles/replace_words_shared.dir/src/data_reader.cpp.o
 .PHONY : src/data_reader.cpp.o
 
 src/data_reader.i: src/data_reader.cpp.i
@@ -165,7 +165,7 @@ src/data_reader.i: src/data_reader.cpp.i
 
 # target to preprocess a source file
 src/data_reader.cpp.i:
-	$(MAKE) -f CMakeFiles/replace_words_shared_library.dir/build.make CMakeFiles/replace_words_shared_library.dir/src/data_reader.cpp.i
+	$(MAKE) -f CMakeFiles/replace_words_shared.dir/build.make CMakeFiles/replace_words_shared.dir/src/data_reader.cpp.i
 .PHONY : src/data_reader.cpp.i
 
 src/data_reader.s: src/data_reader.cpp.s
@@ -174,7 +174,7 @@ src/data_reader.s: src/data_reader.cpp.s
 
 # target to generate assembly for a file
 src/data_reader.cpp.s:
-	$(MAKE) -f CMakeFiles/replace_words_shared_library.dir/build.make CMakeFiles/replace_words_shared_library.dir/src/data_reader.cpp.s
+	$(MAKE) -f CMakeFiles/replace_words_shared.dir/build.make CMakeFiles/replace_words_shared.dir/src/data_reader.cpp.s
 .PHONY : src/data_reader.cpp.s
 
 src/utils.o: src/utils.cpp.o
@@ -183,7 +183,7 @@ src/utils.o: src/utils.cpp.o
 
 # target to build an object file
 src/utils.cpp.o:
-	$(MAKE) -f CMakeFiles/replace_words_shared_library.dir/build.make CMakeFiles/replace_words_shared_library.dir/src/utils.cpp.o
+	$(MAKE) -f CMakeFiles/replace_words_shared.dir/build.make CMakeFiles/replace_words_shared.dir/src/utils.cpp.o
 .PHONY : src/utils.cpp.o
 
 src/utils.i: src/utils.cpp.i
@@ -192,7 +192,7 @@ src/utils.i: src/utils.cpp.i
 
 # target to preprocess a source file
 src/utils.cpp.i:
-	$(MAKE) -f CMakeFiles/replace_words_shared_library.dir/build.make CMakeFiles/replace_words_shared_library.dir/src/utils.cpp.i
+	$(MAKE) -f CMakeFiles/replace_words_shared.dir/build.make CMakeFiles/replace_words_shared.dir/src/utils.cpp.i
 .PHONY : src/utils.cpp.i
 
 src/utils.s: src/utils.cpp.s
@@ -201,7 +201,7 @@ src/utils.s: src/utils.cpp.s
 
 # target to generate assembly for a file
 src/utils.cpp.s:
-	$(MAKE) -f CMakeFiles/replace_words_shared_library.dir/build.make CMakeFiles/replace_words_shared_library.dir/src/utils.cpp.s
+	$(MAKE) -f CMakeFiles/replace_words_shared.dir/build.make CMakeFiles/replace_words_shared.dir/src/utils.cpp.s
 .PHONY : src/utils.cpp.s
 
 # Help Target
@@ -212,7 +212,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... replace_words_shared_library"
+	@echo "... replace_words_shared"
 	@echo "... src/convert_text.o"
 	@echo "... src/convert_text.i"
 	@echo "... src/convert_text.s"
