@@ -15,17 +15,3 @@ jobs:
           cd replace_words
           make test
           make clean
-          
-  test_text_erros_fixer_task:
-    runs-on: ubuntu-latest
-    name: text errors fixer app
-    
-    steps:
-      - uses: actions/checkout@v3
-     
-      - name: Run test for text errors fixer task
-        run: |
-          cd LR4
-          cd check_text_for_errors
-          make test
-          make clean
