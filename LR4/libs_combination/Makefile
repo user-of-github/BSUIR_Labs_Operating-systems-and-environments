@@ -1,2 +1,4 @@
 all:
-	g++ -o main main.cpp ./external_libs/errors_checker.a -L. -l_convert_text
+	rm -rf program
+	rm -rf main.o
+	g++ -o program main.cpp ./external_libs/static/errors_checker.a -L. -l_convert_text

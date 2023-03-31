@@ -12,7 +12,7 @@ install(TARGETS ${PROJECT_NAME}
         PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
         )
 
-ADD_EXECUTABLE(libs_combination main.cpp ./external_libs/errors_checker.a)
+ADD_EXECUTABLE(libs_combination main.cpp external_libs/static/errors_checker.a)
 
 #TARGET_LINK_LIBRARIES(libs_combination external_libs/shared/libreplace_words_shared.so)
 

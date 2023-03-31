@@ -1,10 +1,10 @@
 #include <iostream>
-#include "./external_libs/include/data_reader.hpp"
-#include "./external_libs/include/utils.hpp"
-#include "./external_libs/include/errors_checker.hpp"
-#include "./external_libs/shared/convert_text.hpp"
-#include "./external_libs/shared/utils.hpp"
-#include "./external_libs/shared/data_reader.hpp"
+#include "./external_libs/static/include/data_reader.hpp"
+#include "./external_libs/static/include/utils.hpp"
+#include "./external_libs/static/include/errors_checker.hpp"
+#include "./external_libs/shared_include/convert_text.hpp"
+#include "./external_libs/shared_include/utils.hpp"
+#include "./external_libs/shared_include/data_reader.hpp"
 
 int main()
 {
