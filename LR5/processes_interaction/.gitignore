@@ -1,0 +1,6 @@
+client_app
+.vscode
+.vscode/
+first_app
+second_app
+destroy_shared_memory_app
