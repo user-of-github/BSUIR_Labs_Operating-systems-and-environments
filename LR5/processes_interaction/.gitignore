@@ -4,3 +4,5 @@ client_app
 first_app
 second_app
 destroy_shared_memory_app
+transform_app
+main_app

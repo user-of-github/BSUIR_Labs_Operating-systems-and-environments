@@ -1,15 +1,14 @@
-### Two different programmes (processes) interuct with one shared memory block
-
+## _Two different programmes (processes) interuct with same shared memory block_
+#### _One creates some data and calls another process to compute it by sharing this data via shared memory_
 ____
 
+### To run:  
 
 `make`  
-`./first_app`  
-`./second_app`  
-`./destroy_shared_memory_app` _// destroy created block_  
+`./main_app`   
 `make clean`  
 
 
 ___
 
-###### Copyright 2023 | All rights reserved
+###### Copyright © 2023 April | All rights reserved

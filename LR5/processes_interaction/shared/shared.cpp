@@ -1,7 +1,6 @@
 #include "./shared.hpp"
 
 
-
 static const int get_shared_block(const char *filename, const int size){
     const auto key {ftok(filename, 0)};
 
@@ -9,7 +8,10 @@ static const int get_shared_block(const char *filename, const int size){
         return IPC_RESULT_ERROR;
     }
 
-    // block should be greated if it does not exist
+
+    // returns the shared memory identifier associated with key.
+    // block should be created if it does not exist, 
+    // description of IPC_CREAT: Create key if key does not exist. Expands to: 01000
     // 0644 - something like permissions
     return shmget(key, size, 0644 | IPC_CREAT);
 }
@@ -21,7 +23,8 @@ char * attach_memory_block(const char *filename,const int size)
     if (shared_block_id == IPC_RESULT_ERROR) {
         return NULL;
     }
-
+    
+    // Attaches to the shared memory segment returns the address of the shared memory segment
     char *result {(char *)shmat(shared_block_id, NULL, 0)};
     
 
@@ -33,6 +36,7 @@ char * attach_memory_block(const char *filename,const int size)
 }
 
 const bool detach_memory_block(const char *block) {
+    // detaches from the calling process's address space the shared memory
     return shmdt(block) != IPC_RESULT_ERROR;
 }
 

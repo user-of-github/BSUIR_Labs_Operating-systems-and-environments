@@ -1,15 +1,11 @@
-all: clean first second destroy_shared_memory
+all: clean main compute_data_from_shared_memory
 
-first:
-	g++ -o first_app first.cpp ./shared/shared.cpp
+main:
+	g++ -o main_app main.cpp ./shared/shared.cpp -std=c++17
 
-second:
-	g++ -o second_app second.cpp ./shared/shared.cpp
-
-destroy_shared_memory:
-	g++ -o destroy_shared_memory_app destroy_shared_memory.cpp ./shared/shared.cpp
+compute_data_from_shared_memory:
+	g++ -o transform_app compute_data_from_shared_memory.cpp ./shared/shared.cpp
 
 clean:
-	rm -rf destroy_shared_memory_app
-	rm -rf second_app
-	rm -rf first_app
+	rm -rf transform_app
+	rm -rf main_app
