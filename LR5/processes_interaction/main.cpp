@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
     std::string message{};
     std::getline(std::cin, message);
 
-    char *shared_block;
+    char *shared_block {};
 
     // attach to shared memory and copy string to there, then detach
     shared_block = connect_to_shared_block();

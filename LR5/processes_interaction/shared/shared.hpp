@@ -14,9 +14,9 @@
 
 const auto kFileName {"somefilename"};
 
-const int kBlockSize {4096};
+const auto kBlockSize {4096};
 
-const int IPC_RESULT_ERROR {-1};
+const auto IPC_RESULT_ERROR {-1};
 
 
 char * attach_memory_block(const char *filename,const int size);

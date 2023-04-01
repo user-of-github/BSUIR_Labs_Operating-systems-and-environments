@@ -18,14 +18,14 @@ static const int get_shared_block(const char *filename, const int size){
 
 char * attach_memory_block(const char *filename,const int size)
 {
-    const int shared_block_id {get_shared_block(filename, size)};
+    const auto shared_block_id {get_shared_block(filename, size)};
 
     if (shared_block_id == IPC_RESULT_ERROR) {
         return NULL;
     }
     
     // Attaches to the shared memory segment returns the address of the shared memory segment
-    char *result {(char *)shmat(shared_block_id, NULL, 0)};
+    const auto result {(char *)shmat(shared_block_id, NULL, 0)};
     
 
     if (result == (char *)IPC_RESULT_ERROR) {

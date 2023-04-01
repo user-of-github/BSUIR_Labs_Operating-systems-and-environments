@@ -6,11 +6,11 @@
 
 int main(int argc, char *argv[])
 {
-    char *block{attach_memory_block(kFileName, kBlockSize)};
+    const auto block{attach_memory_block(kFileName, kBlockSize)};
 
     if (block == NULL)
     {
-        throw std::runtime_error("[Process 2] Error: Cen not get block");
+        throw std::runtime_error("[Process 2] Error: Can not get block");
         return -1;
     }
 
@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 
     std::cout << "[Process 2] Reading from shared memory: " << block << '\n';
 
-    std::string transformed{data};
+    auto transformed{data};
 
     sleep(3); // to simulate long operation
 
