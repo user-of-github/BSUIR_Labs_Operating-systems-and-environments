@@ -10,22 +10,22 @@ int main(int argc, char *argv[])
 
     if (block == NULL)
     {
-        throw std::runtime_error("Second: Error: Cen not get block");
+        throw std::runtime_error("[Process 2] Error: Cen not get block");
         return -1;
     }
 
     const std::string data{block};
 
-    std::cout << "[Child] Reading: " << block << '\n';
+    std::cout << "[Process 2] Reading from shared memory: " << block << '\n';
 
     std::string transformed{data};
 
-    sleep(3); // JUST TO SIMULATE HARD WORK IN THIS SEPARATE PROCESS
+    sleep(3); // to simulate long operation
 
 
     std::reverse(std::begin(transformed), std::end(transformed));
 
-    std::cout << "[Child] Changed data in some way: " << transformed << '\n';
+    std::cout << "[Process 2] I changed data in some way: " << transformed << '\n';
     strncpy(block, transformed.c_str(), kBlockSize);
 
     detach_memory_block(block);
