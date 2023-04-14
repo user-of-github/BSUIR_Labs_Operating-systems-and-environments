@@ -1,6 +1,7 @@
 client_app
 .vscode
 .vscode/
+.idea/
 first_app
 second_app
 destroy_shared_memory_app

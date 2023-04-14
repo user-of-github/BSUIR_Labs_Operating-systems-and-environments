@@ -1,3 +1,9 @@
+run: all
+	./main_app
+	rm -rf main_app
+	rm -rf transform_app
+
+
 all: clean main compute_data_from_shared_memory
 
 main:
