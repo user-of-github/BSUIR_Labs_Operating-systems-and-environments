@@ -6,6 +6,7 @@
 * `Makefile`, `CMake`, `Linking`, `Compiling`, `GNU (G++, GCC)`  
 * `Shared libraries`, `Static libraries` 
 * `Multi-processing`, `Shared memory`, `Multi-threading`  
+* `Network elements`
 
 &nbsp;  
 
