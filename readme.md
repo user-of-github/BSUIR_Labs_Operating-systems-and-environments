@@ -5,7 +5,7 @@
 * `C++` _// Modern C++, codestyle :)_   
 * `Makefile`, `CMake`, `Linking`, `Compiling`, `GCC`  
 * `Shared libraries`, `Static libraries` 
-* `Multi-processing`, `multi-threading`  
+* `Multi-processing`, `shared memory`, `multi-threading`  
 
 &nbsp;  
 
