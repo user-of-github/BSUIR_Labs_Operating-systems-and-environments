@@ -103,7 +103,7 @@ void print_sub_vectors(const std::vector<SortedArrayType> &sub_vectors)
 {
 	for (std::size_t counter{0}; const auto &sub_vector : sub_vectors)
 	{
-		std::cout << "Subvector " << counter++ + 1 << ": ";
+		std::cout << "Sub-vector " << counter++ + 1 << ": ";
 		print_array(sub_vector);
 	}
 }

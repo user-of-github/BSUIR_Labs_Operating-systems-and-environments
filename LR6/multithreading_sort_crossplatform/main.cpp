@@ -65,5 +65,5 @@ const std::tuple<const SortedArrayType, const long long> measure_time_of_sorting
 
 	const auto execution_duration {std::chrono::duration_cast<std::chrono::milliseconds>(finish_execution - start_execution).count()};
 
-	return std::make_tuple<const SortedArrayType, const long long>(std::move(sorted_data), execution_duration);
+	return std::make_tuple(std::move(sorted_data), execution_duration);
 }
