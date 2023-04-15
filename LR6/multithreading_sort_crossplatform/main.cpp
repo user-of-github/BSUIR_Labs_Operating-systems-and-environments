@@ -1,5 +1,13 @@
 #include <chrono>
+#include <tuple>
 #include "./sort_service.hpp"
+
+
+const std::tuple<const SortedArrayType, const long long> measure_time_of_sorting_function_executing(
+	const auto &function_pointer,
+	const SortedArrayType &data,
+	const std::size_t second_arg
+);
 
 
 int main()
@@ -14,7 +22,6 @@ int main()
 	if (kArrayLength % kThreadsCount != 0)
 		throw std::invalid_argument("Array length is not multiple of threads count");
 
-
 	std::cout.tie(NULL);
 
 	const auto source_data{generate_random_array(kArrayLength, kMinValue, kMaxValue)};
@@ -24,31 +31,39 @@ int main()
 	//print_array(data);
 	std::cout << (is_sorted(source_data) ? "Initial array is sorted (fantastic...)" : "Initial array is not sorted") << '\n' << '\n';
 
-	const auto start_execution_parallel{std::chrono::high_resolution_clock::now()};
-	const auto sorted_data1{sort_array_in_parallel_threads(source_data, kThreadsCount)};
-	std::cout << (is_sorted(sorted_data1) ? "Sorted" : "Not sorted") << '\n';
-	const auto finish_execution_parallel{std::chrono::high_resolution_clock::now()};
 
-	const auto parallel_execution_duration{std::chrono::duration_cast<std::chrono::milliseconds>(
-		finish_execution_parallel - start_execution_parallel
-	).count()};
-
+	const auto [sorted_data_with_threads, parallel_execution_duration] {
+		measure_time_of_sorting_function_executing(sort_array_in_parallel_threads, source_data, kThreadsCount)
+	};
+	std::cout << (is_sorted(sorted_data_with_threads) ? "Sorted" : "Not sorted") << '\n';
 	std::cout << "Parallel mode: " << parallel_execution_duration << " milliseconds" << '\n' << '\n';
 
-	const auto start_execution_usual{std::chrono::high_resolution_clock::now()};
-	const auto sorted_data2{sort_array_in_one_thread(source_data, kBlocksCount)};
-	std::cout << (is_sorted(sorted_data2) ? "Sorted" : "Not sorted") << '\n';
-	const auto finish_execution_usual{std::chrono::high_resolution_clock::now()};
 
-	const auto usual_execution_duration{std::chrono::duration_cast<std::chrono::milliseconds>(
-		finish_execution_usual - start_execution_usual
-	).count()};
+	const auto [sorted_data_without_threads, usual_execution_duration] {
+		measure_time_of_sorting_function_executing(sort_array_in_one_thread, source_data, kBlocksCount)
+	};
 
+	std::cout << (is_sorted(sorted_data_without_threads) ? "Sorted" : "Not sorted") << '\n';
 	std::cout << "Usual mode: " << usual_execution_duration << " milliseconds" << '\n' << '\n';
 
-	//print_array(sorted_data1);
-	//print_array(sorted_data2);
+	//print_array(sorted_data_with_threads);
+	//print_array(sorted_data_without_threads);
 
 	return 0;
 }
 
+const std::tuple<const SortedArrayType, const long long> measure_time_of_sorting_function_executing(
+	const auto &function_pointer,
+	const SortedArrayType &data,
+	const std::size_t second_arg
+)
+{
+	const auto start_execution{std::chrono::high_resolution_clock::now()};
+	const auto sorted_data{function_pointer(data, second_arg)};
+
+	const auto finish_execution{std::chrono::high_resolution_clock::now()};
+
+	const auto execution_duration {std::chrono::duration_cast<std::chrono::milliseconds>(finish_execution - start_execution).count()};
+
+	return std::make_tuple<const SortedArrayType, const long long>(std::move(sorted_data), execution_duration);
+}
