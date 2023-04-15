@@ -17,6 +17,8 @@ void sort_thread(SortedArrayType &sub_array);
 
 const SortedArrayType sort_array_in_parallel_threads(const SortedArrayType &source, const std::size_t threads_count);
 
+const SortedArrayType sort_array_in_one_thread(const SortedArrayType &source, const std::size_t blocks_count);
+
 void print_array(const SortedArrayType &array);
 
 void print_sub_vectors(const std::vector<SortedArrayType> &);

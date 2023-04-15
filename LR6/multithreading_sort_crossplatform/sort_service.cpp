@@ -92,3 +92,47 @@ const SortedArrayType sort_array_in_parallel_threads(const SortedArrayType &sour
 
 	return response;
 }
+
+const SortedArrayType sort_array_in_one_thread(const SortedArrayType &source, const std::size_t blocks_count)
+{
+	const std::size_t items_per_block{source.size() / blocks_count};
+
+	std::vector<SortedArrayType> sub_vectors_common{};
+
+	sub_vectors_common.clear();
+	sub_vectors_common.shrink_to_fit();
+	sub_vectors_common.reserve(blocks_count);
+
+	// splitting into blocks
+	for (std::size_t thread_number{0}; thread_number < blocks_count; ++thread_number)
+	{
+		const auto start{std::cbegin(source) + items_per_block * thread_number};
+		const auto end{std::cbegin(source) + thread_number * items_per_block + items_per_block};
+		SortedArrayType sub_vector(start, end);
+		sub_vectors_common.push_back(sub_vector);
+	}
+
+
+	for (auto &sub_vector : sub_vectors_common)
+		sort_thread(sub_vector);
+
+	/*std::cout << "\nSORTED SUB-VECTORS:\n" << '\n';
+	print_sub_vectors(sub_vectors_common); */
+
+	SortedArrayType response{};
+
+	for (const auto &sorted_sub_vector : sub_vectors_common)
+	{
+		SortedArrayType temp(response.size() + sorted_sub_vector.size());
+
+		std::merge(
+			std::begin(response), std::end(response),
+			std::begin(sorted_sub_vector), std::cend(sorted_sub_vector),
+			std::begin(temp)
+		);
+
+		response = std::move(temp);
+	}
+
+	return response;
+}
