@@ -3,9 +3,9 @@
 * `OS Linux`  
 * `Shell`, `Bash`  
 * `C++` _// Modern C++, codestyle :)_   
-* `Makefile`, `CMake`, `Linking`, `Compiling`, `GCC`  
+* `Makefile`, `CMake`, `Linking`, `Compiling`, `GNU (G++, GCC)`  
 * `Shared libraries`, `Static libraries` 
-* `Multi-processing`, `shared memory`, `multi-threading`  
+* `Multi-processing`, `Shared memory`, `Multi-threading`  
 
 &nbsp;  
 
