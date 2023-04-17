@@ -25,6 +25,9 @@ void sort_thread(SortedArrayType &sub_array)
 const std::vector<SortedArrayType> split_array_into_sub_arrays(const SortedArrayType &source, const std::size_t blocks_count)
 {
 	const std::size_t items_per_block{source.size() / blocks_count};
+	const std::size_t items_left{source.size() - (items_per_block * blocks_count)};
+
+	//std::cout << "Size " << source.size() << " Blocks count " << blocks_count << " Items per block " << items_per_block << " Left: " << items_left << '\n';
 
 	std::vector<SortedArrayType> sub_blocks{};
 	sub_blocks.reserve(blocks_count);
@@ -35,6 +38,13 @@ const std::vector<SortedArrayType> split_array_into_sub_arrays(const SortedArray
 		const auto end{std::cbegin(source) + block_number * items_per_block + items_per_block};
 		sub_blocks.push_back(SortedArrayType(start, end));
 	}
+
+	const auto left_items_start{std::cbegin(source) + items_per_block * blocks_count};
+	const auto left_items_end{std::cbegin(source) + blocks_count * items_per_block + items_left};
+
+	sub_blocks.at(sub_blocks.size() - 1).insert(std::cend(sub_blocks.at(sub_blocks.size() - 1)), left_items_start, left_items_end);
+
+	//print_sub_vectors(sub_blocks);
 
 	return sub_blocks;
 }
